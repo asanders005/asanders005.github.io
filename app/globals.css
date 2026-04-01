@@ -1,26 +1,36 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ─── Portfolio color tokens ───────────────────────────────────────────────
+   Defining colors in @theme makes Tailwind generate utility classes from them:
+   --color-pcb  →  bg-pcb, text-pcb, border-pcb
+   --color-glow →  bg-glow, text-glow, border-glow  …and so on
+   The variables are also accessible as var(--color-*) in inline SVG styles.
+──────────────────────────────────────────────────────────────────────────── */
+@theme {
+  --color-surface:    #060d12;
+  --color-pcb:        #041a14;
+  --color-trace:      #0e6b7a;
+  --color-glow:       #1ab8d4;
+  --color-chip:       #082030;
+  --color-primary:    #c8eef5;
+  --color-muted:      #5a9ab0;
+  --color-accent:     #1ab8d4;
+  --color-badge:      #0a2535;
+  --color-badge-fg:   #5dd0e8;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  /* Wire up the Geist Mono font loaded by Next.js into Tailwind's font-mono */
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html,
+body {
+  height: 100%;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-surface);
+  color: var(--color-primary);
+  font-family: var(--font-geist-mono), "Courier New", monospace;
 }
