@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import HeroSection from "@/components/home/HeroSection";
 
 export const metadata: Metadata = {
-  title: "Portfolio | Embedded Systems Developer",
+  title: "Portfolio | Aiden Sanders",
 };
 
 export default function HomePage() {

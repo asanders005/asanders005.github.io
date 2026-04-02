@@ -118,8 +118,8 @@ export default function HeroSection() {
           animate={{ opacity: 1 }}
           transition={{ delay: 1.3 }}
         >
-          Writing firmware, debugging hardware, and building tools that live
-          close to the metal.
+          Writing firmware, debugging hardware, and bridging the gap 
+          between physical and digital worlds through code.
         </motion.p>
 
         <motion.div

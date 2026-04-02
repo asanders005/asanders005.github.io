@@ -11,7 +11,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio | Embedded Systems Developer",
+  title: "Portfolio | Aiden Sanders",
   description: "Personal portfolio showcasing embedded systems and low-level software projects.",
 };
 
