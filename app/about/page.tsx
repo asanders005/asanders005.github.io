@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
 // Server Component — no interactivity needed, so no "use client".
 // To add your photo: set HAS_PHOTO = true and add your image to /public/photo.jpg.
 
@@ -15,25 +16,31 @@ const PHOTO_SRC = "/photo.jpg"; // drop your image here in /public
 // ─── Skills grouped by domain ────────────────────────────────────────────────
 const SKILL_GROUPS = [
   {
+    label: "Programming Languages",
+    id: "languages",
+    skills: ["C", "C++", "C#", "Java", "Python", "JavaScript", "SQL"],
+  },
+  {
     label: "Embedded & Hardware",
     id: "embedded",
-    skills: ["C/C++", "Microcontrollers", "Embedded Systems Design", "PlatformIO",
-             "Multithreading", "Unit Testing", "Debugging"],
-  },
-  {
-    label: "Web & Backend",
-    id: "web",
-    skills: ["C#", "ASP.NET Core", "REST APIs", "JavaScript", "HTML/CSS", "Python", "SQL"],
-  },
-  {
-    label: "Game & Graphics",
-    id: "graphics",
-    skills: ["Unity", "Unreal Engine", "OpenGL", "SDL2", "Java"],
+    skills: ["Firmware Development", "Bare-metal Programming", "Microcontrollers", 
+      "Multithreading", "Embedded Systems Design", "PlatformIO"],
   },
   {
     label: "Tools & Practices",
     id: "tools",
-    skills: ["CMake", "Git", "OOP", "Design Patterns", "Visual Studio", "VS Code", "Linux", "Windows"],
+    skills: ["CMake", "Git", "OOP", "Design Patterns", "Unit Testing", "Debugging", 
+      "VS Code", "Visual Studio", "Linux", "Windows"],
+  },
+  {
+    label: "Web & Backend",
+    id: "web",
+    skills: ["ASP.NET Core", "REST APIs", "HTML/CSS"],
+  },
+  {
+    label: "Game & Graphics",
+    id: "graphics",
+    skills: ["Unity", "Unreal Engine", "OpenGL", "SDL2"],
   },
 ];
 
@@ -174,14 +181,35 @@ export default function AboutPage() {
 
         <TraceDivider />
 
-        {/* ── Skills (2×2 grid of groups) ──────────────────────────── */}
+        {/* ── Skills ───────────────────────────────────────────────── */}
         <p className="font-mono text-xs text-muted tracking-widest uppercase mb-6">
           // skills
         </p>
+
+        {/* First group centred above the rest */}
+        <div className="flex justify-center mb-6">
+          <div className="border border-trace/25 rounded p-4 bg-chip/30 w-full sm:max-w-md">
+            <p className="font-mono text-[10px] text-glow tracking-widest uppercase mb-3 flex items-center gap-2">
+              <span className="inline-block w-3 h-px bg-glow/60" />
+              {SKILL_GROUPS[0].label}
+            </p>
+            <div className="flex flex-wrap gap-1.5">
+              {SKILL_GROUPS[0].skills.map((skill) => (
+                <span
+                  key={skill}
+                  className="px-2 py-0.5 text-xs font-mono border border-trace/35 text-muted rounded"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Remaining groups in a 2-column grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          {SKILL_GROUPS.map(({ label, id, skills }) => (
+          {SKILL_GROUPS.slice(1).map(({ label, id, skills }) => (
             <div key={id} className="border border-trace/25 rounded p-4 bg-chip/30">
-              {/* Group header styled like an IC silkscreen label */}
               <p className="font-mono text-[10px] text-glow tracking-widest uppercase mb-3 flex items-center gap-2">
                 <span className="inline-block w-3 h-px bg-glow/60" />
                 {label}
@@ -211,7 +239,7 @@ export default function AboutPage() {
             href="https://github.com/asanders005"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-5 py-2 font-mono text-sm border border-trace text-glow hover:bg-trace/20 rounded transition-colors"
+            className="px-5 py-2 font-mono text-sm border border-muted text-muted hover:border-glow hover:bg-trace/20 hover:text-glow rounded transition-colors"
           >
             [ GitHub ]
           </a>
@@ -219,7 +247,7 @@ export default function AboutPage() {
             href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-5 py-2 font-mono text-sm border border-trace/50 text-muted hover:border-glow hover:text-glow rounded transition-colors"
+            className="px-5 py-2 font-mono text-sm border border-muted text-muted hover:border-glow hover:bg-trace/20 hover:text-glow rounded transition-colors"
           >
             [ Resume PDF ]
           </a>

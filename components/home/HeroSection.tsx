@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
 "use client";
 
 // This component handles all the hero animations.
@@ -130,15 +131,21 @@ export default function HeroSection() {
         >
           <Link
             href="/projects"
-            className="px-6 py-3 font-mono text-sm border border-glow text-glow hover:bg-glow/10 rounded transition-colors tracking-wide"
+            className="px-6 py-3 font-mono text-sm border border-glow text-muted hover:bg-glow/10 hover:text-glow rounded transition-colors tracking-wide"
           >
             [ View Projects ]
           </Link>
           <Link
             href="/about"
-            className="px-6 py-3 font-mono text-sm border border-trace text-muted hover:border-glow hover:text-glow rounded transition-colors tracking-wide"
+            className="px-6 py-3 font-mono text-sm border border-glow text-muted hover:bg-glow/10 hover:text-glow rounded transition-colors tracking-wide"
           >
             [ About Me ]
+          </Link>
+          <Link
+            href="/contact"
+            className="px-6 py-3 font-mono text-sm border border-glow text-muted hover:bg-glow/10 hover:text-glow rounded transition-colors tracking-wide"
+          >
+            [ Contact ]
           </Link>
         </motion.div>
       </motion.div>

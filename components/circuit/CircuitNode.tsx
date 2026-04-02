@@ -16,7 +16,6 @@ interface Props {
   isActive: boolean;
   vpW: number;      // SVG viewBox width  (1000)
   vpH: number;      // SVG viewBox height (600)
-  onClick: () => void;
 }
 
 export default function CircuitNode({
@@ -25,7 +24,6 @@ export default function CircuitNode({
   isActive,
   vpW,
   vpH,
-  onClick,
 }: Props) {
   const cx = (project.node.x / 100) * vpW;
   const cy = (project.node.y / 100) * vpH;
@@ -36,7 +34,7 @@ export default function CircuitNode({
   return (
     // Outer <g> just moves the coordinate origin to the chip centre.
     // All children are drawn relative to (0, 0) = chip centre.
-    <g transform={`translate(${cx} ${cy})`} style={{ cursor: "pointer" }} onClick={onClick}>
+    <g transform={`translate(${cx} ${cy})`} style={{ cursor: "pointer" }} data-project-id={project.id}>
       {/* ── Animated group ─────────────────────────────────────────────────
           transformBox + transformOrigin make the Framer Motion scale
           operate around the element's own bounding-box centre.            */}
