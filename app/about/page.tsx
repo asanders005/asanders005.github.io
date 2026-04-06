@@ -18,7 +18,7 @@ const SKILL_GROUPS = [
   {
     label: "Programming Languages",
     id: "languages",
-    skills: ["C", "C++", "C#", "Java", "Python", "JavaScript", "SQL"],
+    skills: ["C", "C++", "C#", "Java", "JavaScript", "Python", "SQL"],
   },
   {
     label: "Embedded & Hardware",
@@ -29,13 +29,13 @@ const SKILL_GROUPS = [
   {
     label: "Tools & Practices",
     id: "tools",
-    skills: ["CMake", "Git", "OOP", "Design Patterns", "Unit Testing", "Debugging", 
-      "VS Code", "Visual Studio", "Linux", "Windows"],
+    skills: ["Git", "CMake", "OOP", "Unit Testing", "Debugging", "Design Patterns", 
+      "AI-Assisted Development", "VS Code", "Visual Studio", "Linux", "Windows"],
   },
   {
     label: "Web & Backend",
     id: "web",
-    skills: ["ASP.NET Core", "REST APIs", "HTML/CSS"],
+    skills: ["ASP.NET Core", "REST APIs", "Microsoft Azure", "HTML/CSS", "TypeScript", "Next.js", "React"],
   },
   {
     label: "Game & Graphics",
@@ -159,15 +159,17 @@ export default function AboutPage() {
 
               <p className="text-primary/85 leading-relaxed pl-3 border-l border-trace/30">
                 I&apos;m a software engineering student specializing in embedded systems,
-                graduating later this year. My focus is on low-level programming in C
-                and C++, from bare-metal firmware to performance-critical application code.
+                graduating later this year. I was drawn to CS by a fascination with how software 
+                interacts with and shapes the physical world, and that curiosity has pushed 
+                me to build across the full stack — from bare-metal firmware to web APIs.
               </p>
               <p className="text-primary/85 leading-relaxed pl-3 border-l border-trace/30">
-                I also have professional experience developing REST APIs with ASP.NET
-                Core, and my degree includes a game development track that broadened
+                I have professional experience building REST APIs with ASP.NET
+                Core, and my degree&apos;s game development track deepened
                 my understanding of real-time systems and graphics programming.
                 I&apos;m currently gaining industry experience through internships while
-                actively seeking full-time opportunities in embedded or software engineering.
+                looking for full-time opportunities where I can build things that matter, 
+                whether that&apos;s at the firmware layer or further up the stack.
               </p>
 
               {/* Blinking cursor — animate-pulse is a built-in Tailwind animation */}

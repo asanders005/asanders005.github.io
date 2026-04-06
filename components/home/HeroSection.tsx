@@ -12,7 +12,7 @@ import ScanlineOverlay from "@/components/ui/ScanlineOverlay";
 // Decorative circuit traces drawn in the background
 const BG_TRACES = [
   "M 0 200 L 300 200 L 300 100 L 800 100",
-  "M 1920 300 L 1500 300 L 1500 500 L 900 500",
+  "M 1920 300 L 1500 300 L 1500 525 L 900 525",
   "M 0 600 L 200 600 L 200 400 L 1000 400",
   "M 400 0 L 400 250 L 700 250",
   "M 1500 900 L 1500 600 L 1200 600",
@@ -92,7 +92,7 @@ export default function HeroSection() {
           animate={{ opacity: 1 }}
           transition={{ delay: 1 }}
         >
-          // embedded systems · low-level software
+          // embedded systems · systems software · backend
         </motion.p>
 
         <motion.h1
@@ -110,7 +110,7 @@ export default function HeroSection() {
           animate={{ opacity: 1 }}
           transition={{ delay: 1.1 }}
         >
-          Embedded Systems Developer, Software Engineer, Tinkerer
+          Embedded Systems Developer, Software Engineer, Maker
         </motion.p>
 
         <motion.p
@@ -119,8 +119,9 @@ export default function HeroSection() {
           animate={{ opacity: 1 }}
           transition={{ delay: 1.3 }}
         >
-          Writing firmware, debugging hardware, and bridging the gap 
-          between physical and digital worlds through code.
+          From microcontrollers to APIs, I build software at every layer 
+          of the stack — driven by a fascination with bridging the physical 
+          and digital worlds through code.
         </motion.p>
 
         <motion.div
