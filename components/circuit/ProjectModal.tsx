@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { Project } from "@/types/project";
 import Badge from "@/components/ui/Badge";
+import VideoModal from "@/components/circuit/VideoModal";
 
 interface Props {
   project: Project | null;
@@ -34,11 +35,18 @@ const slideVariants = {
 export default function ProjectModal({ project, index, onClose }: Props) {
   const [imgIdx, setImgIdx] = useState(0);
   const [direction, setDirection] = useState(1);
+  const [videoOpen, setVideoOpen] = useState(false);
 
-  useEffect(() => {
+  // Derived-state reset: when the selected project changes, reset carousel and
+  // video state synchronously during render (before paint) instead of in an
+  // effect, avoiding the cascading-render ESLint warning.
+  const [prevId, setPrevId] = useState(project?.id);
+  if (prevId !== project?.id) {
+    setPrevId(project?.id);
     setImgIdx(0);
     setDirection(1);
-  }, [project?.id]);
+    setVideoOpen(false);
+  }
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -76,6 +84,7 @@ export default function ProjectModal({ project, index, onClose }: Props) {
   const partNum = project ? `IC-${String(index + 1).padStart(3, "0")}` : "";
 
   return (
+    <>
     <AnimatePresence>
       {project && (
         <>
@@ -234,14 +243,22 @@ export default function ProjectModal({ project, index, onClose }: Props) {
               >
                 [ GitHub ]
               </a>
+              {project.videoUrl && (
+                <button
+                  onClick={() => setVideoOpen(true)}
+                  className="flex-1 text-center py-2 px-4 text-sm font-mono border border-glow text-glow hover:bg-glow/10 rounded transition-colors"
+                >
+                  [ ▶ Watch Demo ]
+                </button>
+              )}
               {project.liveUrl && (
                 <a
                   href={project.liveUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 text-center py-2 px-4 text-sm font-mono border border-glow text-glow hover:bg-glow/10 rounded transition-colors"
+                  className="flex-1 text-center py-2 px-4 text-sm font-mono border border-trace text-glow hover:bg-trace/20 rounded transition-colors"
                 >
-                  [ Live Demo ]
+                  [ {project.liveLinkText || "Live Demo"} ]
                 </a>
               )}
             </div>
@@ -249,5 +266,13 @@ export default function ProjectModal({ project, index, onClose }: Props) {
         </>
       )}
     </AnimatePresence>
+
+    <VideoModal
+      url={project?.videoUrl ?? ""}
+      title={project?.title ?? ""}
+      isOpen={videoOpen && !!project}
+      onClose={() => setVideoOpen(false)}
+    />
+    </>
   );
 }
