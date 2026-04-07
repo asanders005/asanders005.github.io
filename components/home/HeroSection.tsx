@@ -32,6 +32,7 @@ function BackgroundTraces() {
       viewBox="0 0 1920 1080"
       aria-hidden="true"
     >
+      {/* Draw-on traces */}
       {BG_TRACES.map((d, i) => (
         <motion.path
           key={i}
@@ -44,6 +45,34 @@ function BackgroundTraces() {
           transition={{ duration: 2, delay: i * 0.25 + 0.5, ease: "easeInOut" }}
         />
       ))}
+
+      {/* Signal pulses — short dash (12px) with a gap larger than any trace
+          length, so only one dot is visible at a time per trace. Pulses start
+          after the draw-on animation fully completes. */}
+      {BG_TRACES.map((d, i) => (
+        <motion.path
+          key={`pulse-${i}`}
+          d={d}
+          fill="none"
+          stroke="var(--color-glow)"
+          strokeWidth={2}
+          strokeLinecap="round"
+          strokeDasharray="12 3000"
+          initial={{ strokeDashoffset: 0, opacity: 0 }}
+          animate={{
+            strokeDashoffset: [0, -3012],
+            opacity: [0, 0.85, 0.85, 0],
+          }}
+          transition={{
+            duration: 4,
+            delay: i * 0.9 + 3.5,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+        />
+      ))}
+
+      {/* Via dots at trace endpoints */}
       {BG_DOTS.map(([cx, cy], i) => (
         <motion.circle
           key={i}

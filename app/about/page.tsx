@@ -199,7 +199,7 @@ export default function AboutPage() {
               {SKILL_GROUPS[0].skills.map((skill) => (
                 <span
                   key={skill}
-                  className="px-2 py-0.5 text-xs font-mono border border-trace/35 text-muted rounded"
+                  className="px-2 py-0.5 text-xs font-mono border border-trace/35 text-primary/75 rounded hover:border-glow/50 hover:bg-glow/10 hover:text-glow transition-colors cursor-default"
                 >
                   {skill}
                 </span>
@@ -220,7 +220,7 @@ export default function AboutPage() {
                 {skills.map((skill) => (
                   <span
                     key={skill}
-                    className="px-2 py-0.5 text-xs font-mono border border-trace/35 text-muted rounded"
+                    className="px-2 py-0.5 text-xs font-mono border border-trace/35 text-primary/75 rounded hover:border-glow/50 hover:bg-glow/10 hover:text-glow transition-colors cursor-default"
                   >
                     {skill}
                   </span>

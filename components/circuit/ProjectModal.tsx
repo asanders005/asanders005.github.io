@@ -149,9 +149,16 @@ export default function ProjectModal({ project, index, onClose }: Props) {
               {/* Right — CRT-style image carousel */}
               {project.images.length > 0 && (
                 <div className="w-full md:w-80 shrink-0 flex flex-col gap-2">
+                  {/* Display header label */}
+                  <div className="flex items-center gap-2 mb-0.5">
+                    <span className="inline-block w-1.5 h-1.5 rounded-full bg-glow animate-pulse" />
+                    <p className="font-mono text-[10px] text-glow tracking-widest uppercase">
+                      DISP-OUT // screenshots
+                    </p>
+                  </div>
                   {/* Display panel with scanline overlay */}
                   <div
-                    className="relative rounded overflow-hidden bg-pcb aspect-[4/3] border border-trace/40 touch-pan-y"
+                    className={`relative rounded overflow-hidden bg-pcb aspect-[4/3] border border-glow/30 shadow-[0_0_10px_rgba(26,184,212,0.08)] touch-pan-y ${project.images.length > 1 ? "cursor-grab active:cursor-grabbing" : ""}`}
                     onPointerDown={onSwipeStart}
                     onPointerUp={onSwipeEnd}
                     onPointerCancel={() => { swipeStartX.current = null; }}
