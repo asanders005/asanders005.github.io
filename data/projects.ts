@@ -17,7 +17,7 @@ export const projects: Project[] = [
     techStack: ["C++", "RPi", "OpenCV", "Ultralytics"],
     githubUrl: "https://github.com/asanders005/Marble-Metrics",
     // videoUrl: "https://www.youtube.com/watch?v=E4WlUXrJgy4",
-    images: ["/Projects/MarbleMetrics/Marble.png"],
+    images: ["/projects/MarbleMetrics/Marble.png"],
     node: { x: 25, y: 35 },
   },
   // {
