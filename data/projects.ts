@@ -1,10 +1,10 @@
 import { Project } from "@/types/project";
 
-import CorrputionDeath from "./projects/Corruption/Death.png"
-import CorrputionGameplay from "./projects/Corruption/Gameplay.png"
-import GraphicsRayTrace from "./projects/GraphicsRenderer/RayTrace.png"
-import GraphicsRealTime from "./projects/GraphicsRenderer/RealTime.png"
-import MarbleImage from "./projects/MarbleMetrics/Marble.png"
+import CorrputionDeath from "../public/projects/Corruption/Death.png"
+import CorrputionGameplay from "../public/projects/Corruption/Gameplay.png"
+import GraphicsRayTrace from "../public/projects/GraphicsRenderer/RayTrace.png"
+import GraphicsRealTime from "../public/projects/GraphicsRenderer/RealTime.png"
+import MarbleImage from "../public/projects/MarbleMetrics/Marble.png"
 
 // ─── Edit this file to manage your projects ──────────────────────────────────
 //
