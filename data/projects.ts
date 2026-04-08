@@ -1,5 +1,11 @@
 import { Project } from "@/types/project";
 
+import CorrputionDeath from "./projects/Corruption/Death.png"
+import CorrputionGameplay from "./projects/Corruption/Gameplay.png"
+import GraphicsRayTrace from "./projects/GraphicsRenderer/RayTrace.png"
+import GraphicsRealTime from "./projects/GraphicsRenderer/RealTime.png"
+import MarbleImage from "./projects/MarbleMetrics/Marble.png"
+
 // ─── Edit this file to manage your projects ──────────────────────────────────
 //
 // • node.x / node.y position the IC chip on the circuit board (0–100 %).
@@ -17,7 +23,7 @@ export const projects: Project[] = [
     techStack: ["C++", "RPi", "OpenCV", "Ultralytics"],
     githubUrl: "https://github.com/asanders005/Marble-Metrics",
     // videoUrl: "https://www.youtube.com/watch?v=E4WlUXrJgy4",
-    images: ["/projects/MarbleMetrics/Marble.png"],
+    images: [MarbleImage],
     node: { x: 25, y: 35 },
   },
   // {
@@ -35,7 +41,7 @@ export const projects: Project[] = [
     description: "A graphics engine built from scratch in C++. It features a software rasterizer, raytracing, basic lighting, and support for textured models. This project was a deep dive into the fundamentals of 3D rendering and real-time graphics programming, and served as a hands-on exercise in memory management, software architecture, and performance optimization that applies beyond just graphics work.",
     techStack: ["C++", "SDL2"],
     githubUrl: "https://github.com/asanders005/Graphics-Renderer",
-    images: ["/projects/GraphicsRenderer/RealTime.png", "/projects/GraphicsRenderer/RayTrace.png"],
+    images: [GraphicsRealTime, GraphicsRayTrace],
     node: { x: 45, y: 65 },
   },
   {
@@ -44,7 +50,7 @@ export const projects: Project[] = [
     description: "A retro-style roguelike game developed in C# using the Unity engine. The game features procedurally generated dungeons, fast-paced combat, and pixel art graphics. I made this with a couple of friends for a game jam. I was responsible for implementing core gameplay mechanics, including the procedural generation system, player progression, and environmental interaction systems.",
     techStack: ["C#", "Unity"],
     githubUrl: "https://github.com/asanders005/project-four",
-    images: ["/projects/Corruption/Gameplay.png", "/projects/Corruption/Death.png"],
+    images: [CorrputionGameplay, CorrputionDeath],
     liveUrl: "https://corruptbardlabs.itch.io/corruption",
     liveLinkText: "Itch.io",
     node: { x: 75, y: 60 },

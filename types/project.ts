@@ -1,3 +1,5 @@
+import { StaticImageData } from "next/image";
+
 export type Project = {
   id: string;             // unique slug, e.g. "uart-debugger"
   title: string;
@@ -7,7 +9,7 @@ export type Project = {
   liveUrl?: string;       // optional — external link (itch.io, live site, etc.)
   liveLinkText?: string;  // optional — label for the liveUrl button
   videoUrl?: string;      // optional — YouTube/embed URL; opens in-app video modal
-  images: string[];       // paths relative to /public, e.g. ["/projects/uart.png"]
+  images: StaticImageData[];       // paths relative to /public, e.g. ["/projects/uart.png"]
   node: {
     x: number;            // 0–100 — percentage of board width
     y: number;            // 0–100 — percentage of board height
