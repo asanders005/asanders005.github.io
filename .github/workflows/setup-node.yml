@@ -1,0 +1,16 @@
+name: Setup-node
+Description: "Setup Node.js environment for building and deploying the Next.js site"
+
+runs:
+  using: "composite"
+  steps:
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: "20"
+        cache: "npm"
+      
+    - name: Install Dependencies
+      shell: bash
+      if: steps.cache-dependencies.outputs.cache-hit != 'true'
+      run: npm ci
