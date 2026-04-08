@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio | Aiden Sanders
 
-## Getting Started
+A Next.js (App Router) + TypeScript professional portfolio site with a PCB/circuit-board visual theme. Includes an animated hero, an interactive projects board (pan/zoom + modal inspector), and static About/Contact pages.
 
-First, run the development server:
+## Pages
+
+- `/` — Hero landing page
+- `/projects` — Interactive circuit-board projects explorer
+- `/about` — Bio + skills (includes optional `public/photo.jpg` support)
+- `/contact` — Contact cards (email + LinkedIn)
+
+## Tech Stack
+
+- Next.js (App Router)
+- React
+- TypeScript
+- Tailwind CSS v4
+- Framer Motion
+
+## Local Development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build / Export
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project is configured for static export:
 
-## Learn More
+- `output: "export"`
+- `images.unoptimized: true`
 
-To learn more about Next.js, take a look at the following resources:
+Build the static output:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run build
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Customize Content
 
-## Deploy on Vercel
+### Projects
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Edit `data/projects.ts` to add/update projects. Each project defines:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `title`, `description`, `techStack`
+- `githubUrl` (+ optional `liveUrl`, `videoUrl`)
+- `images` (drop screenshots under `public/projects/`)
+- `node.x` / `node.y` (0–100) to position the chip on the circuit board
+
+### About photo
+
+To add a profile photo:
+
+1. Add `public/photo.jpg`
+2. Set `HAS_PHOTO = true` in `app/about/page.tsx`
+
+### Resume
+
+Place a PDF at `public/resume.pdf` to enable the “Resume PDF” link on the About page.
+
+## Deployment
+
+Because the site is statically exported, you can host it on any static host (e.g. GitHub Pages, Netlify, Cloudflare Pages).
+
+Note: `next.config.ts` currently sets `basePath: "/public"`. If you deploy under a subpath (common for GitHub Pages), ensure `basePath` matches the repository/site path you’re serving from.
+
+## License
+
+No license specified yet. If you plan to open-source this, consider adding a LICENSE file.
