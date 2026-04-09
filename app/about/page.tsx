@@ -10,8 +10,8 @@ export const metadata: Metadata = {
 };
 
 // ─── Flip this to true once you have your photo ──────────────────────────────
-const HAS_PHOTO = false;
-const PHOTO_SRC = "/photo.jpg"; // drop your image here in /public
+const HAS_PHOTO = true;
+const PHOTO_SRC = `${process.env.PAGES_BASE_PATH || ''}PortfolioPic.jpg`; // drop your image here in /public
 
 // ─── Skills grouped by domain ────────────────────────────────────────────────
 const SKILL_GROUPS = [
