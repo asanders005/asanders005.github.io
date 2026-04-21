@@ -246,7 +246,7 @@ export default function AboutPage() {
             [ GitHub ]
           </a>
           <a
-            href="/Portfolio/resume.pdf"
+            href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="px-5 py-2 font-mono text-sm border border-muted text-muted hover:border-glow hover:bg-trace/20 hover:text-glow rounded transition-colors"
