@@ -28,16 +28,16 @@ const SKILL_GROUPS = [
       "Embedded Systems Design", "PCB Design", "EasyEDA", "ESP32", "RPi", "PlatformIO"],
   },
   {
-    label: "Tools & Practices",
-    id: "tools",
-    skills: ["Git", "OOP", "Unit Testing", "Debugging", "Design Patterns", "CMake",
-      "AI-Assisted Development", "VS Code", "Visual Studio", "Linux", "Windows"],
-  },
-  {
     label: "Web & Backend",
     id: "web",
     skills: ["REST APIs", "Database Design", "ASP.NET Core", "PostgreSQL", "MongoDB", 
       "Prisma", "Microsoft Azure", "HTML/CSS", "TypeScript", "Next.js", "React"],
+  },
+  {
+    label: "Tools & Practices",
+    id: "tools",
+    skills: ["Git", "CMake", "OOP", "Unit Testing", "Debugging", "Systems Analysis", "Design Patterns",
+      "AI-Assisted Development", "VS Code", "Visual Studio", "Linux", "Windows"],
   },
   {
     label: "Game & Graphics",
