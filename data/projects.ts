@@ -22,7 +22,7 @@ export const projects: Project[] = [
       "A Raspberry Pi-based system that uses computer vision to track foot traffic -- combining embedded Linux, OpenCV image processing, and an image-recognition model from Ultralytics. I built this project to learn more about computer vision and machine learning on edge devices, and it was a great opportunity to apply my C++ skills in a practical context.",
     techStack: ["C++", "RPi", "OpenCV", "Ultralytics"],
     githubUrl: "https://github.com/asanders005/Marble-Metrics",
-    // videoUrl: "https://www.youtube.com/watch?v=E4WlUXrJgy4",
+    videoUrl: "https://www.youtube.com/watch?v=E4WlUXrJgy4",
     images: [MarbleImage],
     node: { x: 25, y: 35 },
   },
@@ -38,7 +38,7 @@ export const projects: Project[] = [
   {
     id: "graphics-engine",
     title: "C++ Graphics Engine",
-    description: "A graphics engine built from scratch in C++. It features a software rasterizer, raytracing, basic lighting, and support for textured models. This project was a deep dive into the fundamentals of 3D rendering and real-time graphics programming, and served as a hands-on exercise in memory management, software architecture, and performance optimization that applies beyond just graphics work.",
+    description: "A graphics engine built from scratch in C++. It features a software rasterizer, GPU-based raytracing, basic lighting, and support for textured models. This project was a deep dive into the fundamentals of 3D rendering and real-time graphics programming, as well as GPU programming, and served as a hands-on exercise in memory management, software architecture, and performance optimization that applies beyond just graphics work.",
     techStack: ["C++", "SDL2"],
     githubUrl: "https://github.com/asanders005/Graphics-Renderer",
     images: [GraphicsRealTime, GraphicsRayTrace],
