@@ -23,24 +23,27 @@ const SKILL_GROUPS = [
   {
     label: "Embedded & Hardware",
     id: "embedded",
-    skills: ["Firmware Development", "Bare-metal Programming", "Microcontrollers", 
-      "Multithreading", "Embedded Systems Design", "PlatformIO"],
+    skills: ["IoT", "UART", "Wi-Fi", "Bluetooth", "Firmware Development", 
+      "Bare-metal Programming", "Microcontrollers", "Multithreading", 
+      "Embedded Systems Design", "PCB Design", "EasyEDA", "ESP32", "RPi", "PlatformIO"],
   },
   {
     label: "Tools & Practices",
     id: "tools",
-    skills: ["Git", "CMake", "OOP", "Unit Testing", "Debugging", "Design Patterns", 
+    skills: ["Git", "OOP", "Unit Testing", "Debugging", "Design Patterns", "CMake",
       "AI-Assisted Development", "VS Code", "Visual Studio", "Linux", "Windows"],
   },
   {
     label: "Web & Backend",
     id: "web",
-    skills: ["ASP.NET Core", "REST APIs", "Microsoft Azure", "HTML/CSS", "TypeScript", "Next.js", "React"],
+    skills: ["REST APIs", "Database Design", "ASP.NET Core", "PostgreSQL", "MongoDB", 
+      "Prisma", "Microsoft Azure", "HTML/CSS", "TypeScript", "Next.js", "React"],
   },
   {
     label: "Game & Graphics",
     id: "graphics",
-    skills: ["Unity", "Unreal Engine", "OpenGL", "SDL2"],
+    skills: ["Unity", "Unreal Engine", "Real-time Rendering", "Raytracing", 
+      "GPU Programming", "OpenGL", "SDL2", "CUDA"],
   },
 ];
 

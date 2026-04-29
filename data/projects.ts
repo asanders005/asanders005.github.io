@@ -39,7 +39,7 @@ export const projects: Project[] = [
     id: "graphics-engine",
     title: "C++ Graphics Engine",
     description: "A graphics engine built from scratch in C++. It features a software rasterizer, GPU-based raytracing, basic lighting, and support for textured models. This project was a deep dive into the fundamentals of 3D rendering and real-time graphics programming, as well as GPU programming, and served as a hands-on exercise in memory management, software architecture, and performance optimization that applies beyond just graphics work.",
-    techStack: ["C++", "SDL2"],
+    techStack: ["C++", "SDL2", "OpenGL", "CUDA"],
     githubUrl: "https://github.com/asanders005/Graphics-Renderer",
     images: [GraphicsRealTime, GraphicsRayTrace],
     node: { x: 45, y: 65 },
