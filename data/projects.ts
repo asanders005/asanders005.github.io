@@ -22,7 +22,7 @@ export const projects: Project[] = [
       "A Raspberry Pi-based system that uses computer vision to track foot traffic -- combining embedded Linux, OpenCV image processing, and an image-recognition model from Ultralytics. I built this project to learn more about computer vision and machine learning on edge devices, and it was a great opportunity to apply my C++ skills in a practical context.",
     techStack: ["C++", "RPi", "OpenCV", "Ultralytics"],
     githubUrl: "https://github.com/asanders005/Marble-Metrics",
-    videoUrl: "https://www.youtube.com/watch?v=E4WlUXrJgy4",
+    // videoUrl: "https://www.youtube.com/watch?v=E4WlUXrJgy4",
     images: [MarbleImage],
     node: { x: 25, y: 35 },
   },
